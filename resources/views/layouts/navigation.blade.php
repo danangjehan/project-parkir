@@ -17,6 +17,8 @@
                     </x-nav-link>
                 </div>
 
+                @if(Auth::user()->is_admin == true)
+
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('pegawai.index')" :active="request()->routeIs('pegawai.*')">
                         {{ __('Pegawai') }}
@@ -28,6 +30,8 @@
                         {{ __('Kendaraan') }}
                     </x-nav-link>
                 </div>
+
+                @endif
 
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
